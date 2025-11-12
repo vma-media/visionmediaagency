@@ -1,61 +1,154 @@
-<!-- ===== Header Section ===== -->
-<header style="background: linear-gradient(135deg, #5b2ca0, #8b48d7); color: white; padding: 20px 0; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-    <img src="https://i.postimg.cc/qM4h3Yrj/agency-logo.jpg" alt="VMA Media Agency Logo" style="width: 120px; height: 120px; border-radius: 50%; border: 3px solid white; object-fit: cover; margin-bottom: 10px;">
-    <h1 style="font-size: 36px; margin: 0;">VMA Media Agency</h1>
-    <p style="font-size: 16px; margin-top: 8px; opacity: 0.9;">Your Digital Growth Partner</p>
-    <p style="margin-top: 12px; font-size: 18px;">📞 <strong>+91 9142012623</strong></p>
-  </div>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VMA Media Agency</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #f9f6ff;
+      color: #333;
+    }
 
-<!-- ===== Services Section ===== -->
-<section id="services" style="background: #f5f0ff; padding: 60px 20px; text-align:center;">
-  <h2 style="color: #5b2ca0; font-size: 32px; margin-bottom: 40px;">Our Services</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px;">
-    
-    <div style="background: white; width: 300px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden;">
-      <img src="https://i.postimg.cc/pTM6kWtx/social-media.jpg" alt="Social Media Marketing" style="width: 100%; height: 200px; object-fit: cover;">
-      <h3 style="margin: 15px 0; color: #5b2ca0;">Social Media Marketing</h3>
-      <p style="padding: 0 20px 20px;">We boost your brand presence on all social media platforms.</p>
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #5b2ca0, #8b48d7);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid white;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    /* Section Titles */
+    h2 {
+      text-align: center;
+      color: #5b2ca0;
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+
+    /* Service & Portfolio Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 0 20px 50px;
+      justify-items: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      color: #5b2ca0;
+      margin: 15px 0 10px;
+    }
+
+    .card p {
+      font-size: 15px;
+      padding: 0 15px 20px;
+    }
+
+    /* Offer Section */
+    #offers {
+      background: linear-gradient(135deg, #5b2ca0, #8b48d7);
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+    #offers a {
+      background: white;
+      color: #5b2ca0;
+      padding: 14px 35px;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+    #offers a:hover {
+      background: #eee;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="https://i.ibb.co/qM4h3Yrj/agency-logo.jpg" alt="VMA Media Agency Logo">
+    <h1>VMA Media Agency</h1>
+    <p>Your Digital Growth Partner</p>
+    <p>📞 <strong>+91 9142012623</strong></p>
+  </header>
+
+  <!-- Services -->
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://i.ibb.co/pK60Jwz/social-media.jpg" alt="Social Media Marketing">
+      <h3>Social Media Marketing</h3>
+      <p>We boost your brand presence on all social media platforms.</p>
     </div>
-
-    <div style="background: white; width: 300px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden;">
-      <img src="https://i.postimg.cc/GmWqXtmc/brand-promotion.jpg" alt="Brand Promotion" style="width: 100%; height: 200px; object-fit: cover;">
-      <h3 style="margin: 15px 0; color: #5b2ca0;">Brand Promotion</h3>
-      <p style="padding: 0 20px 20px;">Increase your brand visibility with our creative promotion strategies.</p>
+    <div class="card">
+      <img src="https://i.ibb.co/txpqX6B/brand-promotion.jpg" alt="Brand Promotion">
+      <h3>Brand Promotion</h3>
+      <p>Increase your brand visibility with our creative promotion strategies.</p>
     </div>
-
-    <div style="background: white; width: 300px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden;">
-      <img src="https://i.postimg.cc/zvRp3Rrf/affiliate-marketing.jpg" alt="Affiliate Marketing" style="width: 100%; height: 200px; object-fit: cover;">
-      <h3 style="margin: 15px 0; color: #5b2ca0;">Affiliate Marketing</h3>
-      <p style="padding: 0 20px 20px;">Join our affiliate network to maximize your reach and profits.</p>
+    <div class="card">
+      <img src="https://i.ibb.co/1ds8D5H/affiliate-marketing.jpg" alt="Affiliate Marketing">
+      <h3>Affiliate Marketing</h3>
+      <p>Join our affiliate network to maximize your reach and profits.</p>
     </div>
-
   </div>
-</section>
 
-<!-- ===== Portfolio Section ===== -->
-<section id="portfolio" style="background: #fff; padding: 60px 20px; text-align:center;">
-  <h2 style="color: #5b2ca0; font-size: 32px; margin-bottom: 40px;">Our Portfolio</h2>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 0 20px;">
-    
-    <img src="https://i.postimg.cc/jqR1c1DY/portfolio1.jpg" style="width:100%; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);" alt="Portfolio 1">
-    <img src="https://i.postimg.cc/SKhc4C3t/portfolio2.jpg" style="width:100%; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);" alt="Portfolio 2">
-    <img src="https://i.postimg.cc/6p2BvTLK/portfolio3.jpg" style="width:100%; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);" alt="Portfolio 3">
-    <img src="https://i.postimg.cc/Z5rWzD9y/portfolio4.jpg" style="width:100%; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);" alt="Portfolio 4">
-    <img src="https://i.postimg.cc/Mp6TFzCs/portfolio5.jpg" style="width:100%; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);" alt="Portfolio 5">
-    <img src="https://i.postimg.cc/K8HLJH3V/portfolio6.jpg" style="width:100%; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);" alt="Portfolio 6">
-  
+  <!-- Portfolio -->
+  <h2>Our Portfolio</h2>
+  <div class="grid">
+    <div class="card"><img src="https://i.ibb.co/3f5ZzV7/portfolio1.jpg" alt="Portfolio 1"></div>
+    <div class="card"><img src="https://i.ibb.co/7YxL9jW/portfolio2.jpg" alt="Portfolio 2"></div>
+    <div class="card"><img src="https://i.ibb.co/tLzvDTf/portfolio3.jpg" alt="Portfolio 3"></div>
+    <div class="card"><img src="https://i.ibb.co/DwW72sF/portfolio4.jpg" alt="Portfolio 4"></div>
+    <div class="card"><img src="https://i.ibb.co/GsQnY1x/portfolio5.jpg" alt="Portfolio 5"></div>
+    <div class="card"><img src="https://i.ibb.co/SKXw1pb/portfolio6.jpg" alt="Portfolio 6"></div>
   </div>
-</section>
 
-<!-- ===== Offer Section ===== -->
-<section id="offers" style="background: linear-gradient(135deg, #5b2ca0, #8b48d7); padding: 70px 20px; text-align: center; color: #fff;">
-  <h2 style="font-size: 34px; margin-bottom: 20px;">🎁 Exclusive Offer for You!</h2>
-  <p style="font-size: 18px; margin-bottom: 30px;">Join our Telegram channel to grab the latest deals, updates, and earning opportunities.</p>
-  <a href="https://t.me/OnlineMoneyearingbyShubham" target="_blank" 
-     style="background: #fff; color: #5b2ca0; padding: 14px 35px; border-radius: 50px; font-size: 18px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.3s;">
-     🚀 Get Offer
-  </a>
-  <p style="margin-top: 25px; font-size: 14px; opacity: 0.9;">Tap the button to open our official Telegram channel.</p>
-</section>
+  <!-- Offer Section -->
+  <section id="offers">
+    <h2>🎁 Exclusive Offer for You!</h2>
+    <p>Join our Telegram channel to grab the latest deals, updates, and earning opportunities.</p>
+    <a href="https://t.me/OnlineMoneyearingbyShubham" target="_blank">🚀 Get Offer</a>
+    <p style="margin-top: 25px; font-size: 14px; opacity: 0.9;">Tap the button to open our official Telegram channel.</p>
+  </section>
+
+</body>
+</html>
