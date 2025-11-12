@@ -1,103 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VMA Media Agency</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vision Media Agency</title>
   <style>
-    body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      background-color: #f9f6ff;
-      color: #333;
+    :root{
+      --purple1:#5b2ca0;
+      --purple2:#8b48d7;
+      --bg:#f9f6ff;
+      --card-bg:#fff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Poppins", system-ui, Arial, sans-serif;
+      background:var(--bg);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
     }
 
     /* Header */
-    header {
-      background: linear-gradient(135deg, #5b2ca0, #8b48d7);
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    header{
+      background: linear-gradient(135deg, var(--purple1), var(--purple2));
+      color:#fff;
+      padding:32px 18px;
+      text-align:center;
+      box-shadow:0 6px 18px rgba(0,0,0,0.12);
     }
-    header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 3px solid white;
-      object-fit: cover;
-      margin-bottom: 10px;
+    .logo{
+      width:110px;
+      height:110px;
+      border-radius:50%;
+      border:3px solid rgba(255,255,255,0.9);
+      object-fit:cover;
+      display:block;
+      margin:0 auto 12px;
+      background:#fff;
+    }
+    header h1{margin:6px 0 4px; font-size:28px; letter-spacing:0.3px}
+    header p {margin:4px 0; opacity:0.95}
+
+    /* Sections */
+    .section-title{
+      text-align:center;
+      color:var(--purple1);
+      margin:44px 0 18px;
+      font-size:24px;
+      font-weight:600;
     }
 
-    /* Section Titles */
-    h2 {
-      text-align: center;
-      color: #5b2ca0;
-      margin-top: 50px;
-      margin-bottom: 30px;
+    /* Grid (services + portfolio) */
+    .grid{
+      width:100%;
+      max-width:1100px;
+      margin:0 auto 40px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:22px;
+      padding:0 16px;
     }
 
-    /* Service & Portfolio Grid */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      padding: 0 20px 50px;
-      justify-items: center;
+    .card{
+      background:var(--card-bg);
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 8px 20px rgba(29,15,45,0.06);
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+      text-align:center;
+      min-height:340px;
+      display:flex;
+      flex-direction:column;
     }
+    .card:hover{ transform: translateY(-8px); box-shadow:0 18px 40px rgba(29,15,45,0.12); }
 
-    .card {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      overflow: hidden;
-      text-align: center;
-      transition: transform 0.3s;
-      width: 100%;
-      max-width: 300px;
+    .card img{
+      width:100%;
+      height:190px;
+      object-fit:cover;
+      display:block;
     }
+    .card .content{
+      padding:18px;
+      flex:1;
+    }
+    .card h3{ color:var(--purple1); margin:8px 0 10px; font-size:18px; }
+    .card p{ color:#444; font-size:14.5px; line-height:1.5; margin:0 0 8px; }
 
-    .card:hover {
-      transform: translateY(-8px);
-    }
+    /* Portfolio variants: only image */
+    .card.small{ min-height:260px; }
+    .card.small img{ height:200px; border-radius:12px; }
 
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
+    /* Offer section */
+    #offers{
+      background: linear-gradient(135deg, var(--purple1), var(--purple2));
+      color:#fff;
+      padding:54px 18px;
+      text-align:center;
+      margin-top:10px;
     }
+    #offers h2{ font-size:22px; margin:6px 0 8px; }
+    #offers p{ margin:0 0 18px; opacity:0.95; max-width:780px; margin-left:auto; margin-right:auto; }
+    .btn-offer{
+      display:inline-block;
+      background:#fff;
+      color:var(--purple1);
+      padding:12px 28px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:700;
+      box-shadow:0 6px 18px rgba(0,0,0,0.15);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .btn-offer:hover{ transform:translateY(-4px); box-shadow:0 14px 30px rgba(0,0,0,0.18); }
 
-    .card h3 {
-      color: #5b2ca0;
-      margin: 15px 0 10px;
-    }
+    /* Footer spacing */
+    footer{ height:40px; }
 
-    .card p {
-      font-size: 15px;
-      padding: 0 15px 20px;
-    }
-
-    /* Offer Section */
-    #offers {
-      background: linear-gradient(135deg, #5b2ca0, #8b48d7);
-      color: white;
-      padding: 70px 20px;
-      text-align: center;
-    }
-    #offers a {
-      background: white;
-      color: #5b2ca0;
-      padding: 14px 35px;
-      border-radius: 50px;
-      font-size: 18px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: 0.3s;
-    }
-    #offers a:hover {
-      background: #eee;
-      transform: scale(1.05);
+    /* Responsive tweaks */
+    @media (max-width:520px){
+      header h1{ font-size:22px }
+      .logo{ width:100px; height:100px; }
+      .card{ min-height:320px; }
+      .card img{ height:180px; }
     }
   </style>
 </head>
@@ -105,50 +130,62 @@
 
   <!-- Header -->
   <header>
-    <img src="https://i.ibb.co/qM4h3Yrj/agency-logo.jpg" alt="VMA Media Agency Logo">
-    <h1>VMA Media Agency</h1>
-    <p>Your Digital Growth Partner</p>
-    <p>📞 <strong>+91 9142012623</strong></p>
+    <!-- Example logo (you can replace with your own later) -->
+    <img class="logo" src="https://source.unsplash.com/200x200/?logo,agency" alt="Vision Media Agency Logo">
+    <h1>Vision Media Agency</h1>
+    <p style="margin-top:6px;opacity:0.95">Your Digital Growth Partner</p>
+    <p style="margin-top:10px;font-weight:700">📞 +91 9142012623</p>
   </header>
 
   <!-- Services -->
-  <h2>Our Services</h2>
-  <div class="grid">
+  <h2 class="section-title">Our Services</h2>
+  <div class="grid" aria-label="Services">
     <div class="card">
-      <img src="https://i.ibb.co/pK60Jwz/social-media.jpg" alt="Social Media Marketing">
-      <h3>Social Media Marketing</h3>
-      <p>We boost your brand presence on all social media platforms.</p>
+      <!-- direct image from Unsplash (works with GitHub Pages) -->
+      <img src="https://source.unsplash.com/800x600/?digital-marketing,social-media" alt="Social Media Marketing">
+      <div class="content">
+        <h3>Social Media Marketing</h3>
+        <p>We boost your brand presence on all social media platforms with creative campaigns and content strategy.</p>
+      </div>
     </div>
+
     <div class="card">
-      <img src="https://i.ibb.co/txpqX6B/brand-promotion.jpg" alt="Brand Promotion">
-      <h3>Brand Promotion</h3>
-      <p>Increase your brand visibility with our creative promotion strategies.</p>
+      <img src="https://source.unsplash.com/800x600/?brand,advertising" alt="Brand Promotion">
+      <div class="content">
+        <h3>Brand Promotion</h3>
+        <p>Increase your brand visibility with targeted promotion strategies across channels.</p>
+      </div>
     </div>
+
     <div class="card">
-      <img src="https://i.ibb.co/1ds8D5H/affiliate-marketing.jpg" alt="Affiliate Marketing">
-      <h3>Affiliate Marketing</h3>
-      <p>Join our affiliate network to maximize your reach and profits.</p>
+      <img src="https://source.unsplash.com/800x600/?affiliate,partnership" alt="Affiliate Marketing">
+      <div class="content">
+        <h3>Affiliate Marketing</h3>
+        <p>Join our affiliate network to maximize reach and earn commissions through performance campaigns.</p>
+      </div>
     </div>
   </div>
 
   <!-- Portfolio -->
-  <h2>Our Portfolio</h2>
-  <div class="grid">
-    <div class="card"><img src="https://i.ibb.co/3f5ZzV7/portfolio1.jpg" alt="Portfolio 1"></div>
-    <div class="card"><img src="https://i.ibb.co/7YxL9jW/portfolio2.jpg" alt="Portfolio 2"></div>
-    <div class="card"><img src="https://i.ibb.co/tLzvDTf/portfolio3.jpg" alt="Portfolio 3"></div>
-    <div class="card"><img src="https://i.ibb.co/DwW72sF/portfolio4.jpg" alt="Portfolio 4"></div>
-    <div class="card"><img src="https://i.ibb.co/GsQnY1x/portfolio5.jpg" alt="Portfolio 5"></div>
-    <div class="card"><img src="https://i.ibb.co/SKXw1pb/portfolio6.jpg" alt="Portfolio 6"></div>
+  <h2 class="section-title">Our Portfolio</h2>
+  <div class="grid" aria-label="Portfolio">
+    <div class="card small"><img src="https://source.unsplash.com/600x500/?marketing,project1" alt="Portfolio 1"></div>
+    <div class="card small"><img src="https://source.unsplash.com/600x500/?marketing,project2" alt="Portfolio 2"></div>
+    <div class="card small"><img src="https://source.unsplash.com/600x500/?digital,design" alt="Portfolio 3"></div>
+    <div class="card small"><img src="https://source.unsplash.com/600x500/?campaign,ads" alt="Portfolio 4"></div>
+    <div class="card small"><img src="https://source.unsplash.com/600x500/?social,content" alt="Portfolio 5"></div>
+    <div class="card small"><img src="https://source.unsplash.com/600x500/?creative,studio" alt="Portfolio 6"></div>
   </div>
 
   <!-- Offer Section -->
   <section id="offers">
     <h2>🎁 Exclusive Offer for You!</h2>
     <p>Join our Telegram channel to grab the latest deals, updates, and earning opportunities.</p>
-    <a href="https://t.me/OnlineMoneyearingbyShubham" target="_blank">🚀 Get Offer</a>
-    <p style="margin-top: 25px; font-size: 14px; opacity: 0.9;">Tap the button to open our official Telegram channel.</p>
+    <!-- Replace link below if you want different channel -->
+    <a class="btn-offer" href="https://t.me/OnlineMoneyearingbyShubham" target="_blank" rel="noopener noreferrer">🚀 Get Offer</a>
+    <p style="margin-top:16px;opacity:0.9; font-size:13px">Tap the button to open our official Telegram channel.</p>
   </section>
 
+  <footer></footer>
 </body>
 </html>
