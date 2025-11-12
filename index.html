@@ -1,364 +1,61 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Vision Media Agency</title>
-  <meta name="description" content="Vision Media Agency — Digital & Social Media Marketing, Brand Promotion, Affiliate Marketing" />
-  <style>
-    :root{
-      --purple-1: #5b2cff;
-      --purple-2: #7b4dff;
-      --bg: #0f0b12;
-      --card: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-      --glass: rgba(255,255,255,0.03);
-      --glass-2: rgba(255,255,255,0.02);
-      --accent: #e6e0ff;
-      --rounded: 12px;
-      font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      background: radial-gradient(1200px 600px at 10% 10%, rgba(91,44,255,0.08), transparent),
-                  radial-gradient(900px 500px at 90% 90%, rgba(123,77,255,0.06), transparent),
-                  var(--bg);
-      color:var(--accent);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-      min-height:100vh;
-    }
+<!-- ===== Header Section ===== -->
+<header style="background: linear-gradient(135deg, #5b2ca0, #8b48d7); color: white; padding: 20px 0; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <img src="https://i.postimg.cc/qM4h3Yrj/agency-logo.jpg" alt="VMA Media Agency Logo" style="width: 120px; height: 120px; border-radius: 50%; border: 3px solid white; object-fit: cover; margin-bottom: 10px;">
+    <h1 style="font-size: 36px; margin: 0;">VMA Media Agency</h1>
+    <p style="font-size: 16px; margin-top: 8px; opacity: 0.9;">Your Digital Growth Partner</p>
+    <p style="margin-top: 12px; font-size: 18px;">📞 <strong>+91 9142012623</strong></p>
+  </div>
+</header>
 
-    /* Header */
-    header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:18px 28px;
-      position:sticky;
-      top:0;
-      z-index:40;
-      backdrop-filter: blur(6px);
-      background: linear-gradient(180deg, rgba(15,11,18,0.6), rgba(15,11,18,0.4));
-      border-bottom: 1px solid rgba(255,255,255,0.03);
-    }
-    .brand{
-      display:flex;
-      gap:12px;
-      align-items:center;
-    }
-    .logo{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:56px;
-      height:56px;
-      border-radius:12px;
-      background: linear-gradient(135deg, var(--purple-1), var(--purple-2));
-      box-shadow: 0 8px 30px rgba(91,44,255,0.12), inset 0 -6px 16px rgba(0,0,0,0.18);
-      font-weight:700;
-      color:white;
-      font-size:20px;
-    }
-    .brand h1{margin:0;font-size:18px;letter-spacing:0.2px}
-    .brand p{margin:0;font-size:12px;color:rgba(230,224,255,0.75)}
-
-    /* Desktop nav (hidden on small screens) */
-    nav.desktop{
-      display:flex;
-      gap:18px;
-      align-items:center;
-    }
-    nav.desktop a{
-      color:var(--accent);
-      text-decoration:none;
-      padding:8px 12px;
-      border-radius:8px;
-      font-weight:600;
-      font-size:14px;
-    }
-    nav.desktop a.cta{
-      background: linear-gradient(90deg,var(--purple-1),var(--purple-2));
-      color:white;
-      box-shadow:0 6px 18px rgba(91,44,255,0.12);
-    }
-
-    /* Hamburger */
-    .hamburger{
-      display:inline-grid;
-      place-items:center;
-      width:48px;height:48px;border-radius:10px;
-      background:var(--glass);
-      border:1px solid rgba(255,255,255,0.02);
-      cursor:pointer;
-    }
-
-    /* Side menu */
-    .side-menu{
-      position:fixed;
-      right:-360px;
-      top:0;
-      height:100vh;
-      width:320px;
-      max-width:92%;
-      background: linear-gradient(180deg, rgba(20,14,25,0.96), rgba(11,8,14,0.92));
-      box-shadow: -40px 0 80px rgba(8,6,12,0.6);
-      padding:28px;
-      transition: right 300ms cubic-bezier(.2,.9,.25,1);
-      z-index:60;
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-    }
-    .side-menu.open{ right:0; }
-    .side-menu h3{ margin:0; font-size:16px; color:var(--accent) }
-    .side-menu .menu-item{
-      background:var(--glass-2);
-      padding:12px;
-      border-radius:10px;
-      border:1px solid rgba(255,255,255,0.02);
-      cursor:pointer;
-      font-weight:600;
-    }
-
-    /* Main hero */
-    .hero{
-      display:grid;
-      grid-template-columns: 1fr 420px;
-      gap:20px;
-      align-items:center;
-      padding:48px 6%;
-    }
-    .hero .left h2{font-size:32px;margin:0 0 12px;color:white}
-    .hero .left p{margin:8px 0 20px;color:rgba(230,224,255,0.85)}
-    .hero .cta-row{display:flex;gap:12px}
-    .btn{
-      padding:12px 16px;border-radius:10px;border:0;font-weight:700;cursor:pointer;
-    }
-    .btn-primary{ background: linear-gradient(90deg,var(--purple-1),var(--purple-2)); color:white; box-shadow:0 10px 30px rgba(91,44,255,0.12) }
-    .card{
-      background: var(--card);
-      border-radius:14px;
-      padding:14px;
-      color:var(--accent);
-      border:1px solid rgba(255,255,255,0.02);
-    }
-
-    /* Services */
-    .services{
-      padding:30px 6%;
-      display:grid;
-      gap:18px;
-      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-    }
-    .service-card{
-      border-radius:12px;
-      overflow:hidden;
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
-      transition: transform .22s ease, box-shadow .22s ease;
-    }
-    .service-card:hover{ transform: translateY(-6px); box-shadow: 0 22px 60px rgba(11,8,18,0.6);}
-    .service-card img{ width:100%; height:160px; object-fit:cover; display:block; }
-    .service-body{ padding:12px 14px; }
-    .service-body h4{ margin:0 0 8px; color:white }
-    .service-body p{ margin:0; color:rgba(230,224,255,0.82); font-size:14px }
-
-    /* Portfolio */
-    .portfolio{
-      padding:30px 6%;
-    }
-    .portfolio-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:14px; }
-    .port-item{
-      border-radius:12px; overflow:hidden; background:var(--glass-2); border:1px solid rgba(255,255,255,0.02);
-    }
-    .port-item img{ width:100%; height:180px; object-fit:cover; display:block; }
-
-    /* Footer */
-    footer{ padding:28px 6%; color:rgba(230,224,255,0.7); font-size:13px }
-
-    /* Responsive */
-    @media (max-width:880px){
-      .hero{ grid-template-columns: 1fr; padding:36px 4%; gap:18px; }
-      nav.desktop{ display:none; }
-      .hamburger{ display:grid; }
-    }
-    @media (min-width:881px){
-      .hamburger{ display:none; }
-      .side-menu{ right:-420px; width:380px; }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="brand">
-      <!-- Purple gradient SVG-style logo block (replace with actual logo file if you have) -->
-      <div class="logo" aria-hidden="true">
-        V
-      </div>
-      <div>
-        <h1>Vision Media Agency</h1>
-        <p>Digital · Social · Brand</p>
-      </div>
+<!-- ===== Services Section ===== -->
+<section id="services" style="background: #f5f0ff; padding: 60px 20px; text-align:center;">
+  <h2 style="color: #5b2ca0; font-size: 32px; margin-bottom: 40px;">Our Services</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px;">
+    
+    <div style="background: white; width: 300px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden;">
+      <img src="https://i.postimg.cc/pTM6kWtx/social-media.jpg" alt="Social Media Marketing" style="width: 100%; height: 200px; object-fit: cover;">
+      <h3 style="margin: 15px 0; color: #5b2ca0;">Social Media Marketing</h3>
+      <p style="padding: 0 20px 20px;">We boost your brand presence on all social media platforms.</p>
     </div>
 
-    <nav class="desktop" aria-label="Main navigation">
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact" class="cta">Contact</a>
-    </nav>
-
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <svg width="22" height="14" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="2" rx="1" y="0" fill="white" opacity="0.95"/><rect width="24" height="2" rx="1" y="7" fill="white" opacity="0.65"/><rect width="24" height="2" rx="1" y="14" fill="white" opacity="0.4"/></svg>
-    </button>
-  </header>
-
-  <!-- Side sliding menu -->
-  <aside class="side-menu" id="sideMenu" aria-hidden="true">
-    <h3>Menu</h3>
-    <div class="menu-item" onclick="scrollToSec('services')">Services</div>
-    <div class="menu-item" onclick="scrollToSec('offers')">Offers</div>
-    <div style="height:8px"></div>
-    <div style="font-size:13px;color:rgba(230,224,255,0.7)">Phone: +91-XXXXXXXXXX</div>
-    <div style="font-size:13px;color:rgba(230,224,255,0.6)">Email: hello@visionmediaagency.com</div>
-  </aside>
-
-  <!-- HERO -->
-  <main>
-    <section class="hero" id="top">
-      <div class="left">
-        <h2>Grow your brand with modern Purple-themed digital marketing</h2>
-        <p>We build campaigns that convert — Social Media, Brand Promotion, Affiliate Marketing and more. Let’s make your brand visible.</p>
-        <div class="cta-row">
-          <button class="btn btn-primary" onclick="scrollToSec('services')">Our Services</button>
-          <button class="btn" onclick="scrollToSec('portfolio')">View Portfolio</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <h4 style="margin:0 0 8px">Quick contact</h4>
-        <p style="margin:0 0 12px;color:rgba(230,224,255,0.8)">Get a free consultation — WhatsApp / Call</p>
-        <div style="display:flex; gap:8px;">
-          <input type="text" placeholder="Your phone or email" style="flex:1;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--accent)">
-          <button class="btn btn-primary">Send</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="services">
-      <!-- Service 1: Digital Marketing -->
-      <article class="service-card">
-        <img src="https://source.unsplash.com/collection/895539/800x600?digital-marketing" alt="Digital Marketing">
-        <div class="service-body">
-          <h4>Digital Marketing</h4>
-          <p>Full-funnel campaigns — paid ads, strategy, analytics and optimisation to increase ROI.</p>
-        </div>
-      </article>
-
-      <!-- Service 2: Social Media Marketing -->
-      <article class="service-card">
-        <img src="https://source.unsplash.com/800x600/?social-media,marketing" alt="Social Media Marketing">
-        <div class="service-body">
-          <h4>Social Media Marketing</h4>
-          <p>Content, creatives, community management and paid social to grow your audience & conversions.</p>
-        </div>
-      </article>
-
-      <!-- Service 3: Brand Promotion -->
-      <article class="service-card">
-        <img src="https://source.unsplash.com/800x600/?brand-promotion,branding" alt="Brand Promotion">
-        <div class="service-body">
-          <h4>Brand Promotion</h4>
-          <p>Campaigns & activations that build recall and trust for your brand across channels.</p>
-        </div>
-      </article>
-
-      <!-- Service 4: Affiliate Marketing -->
-      <article class="service-card">
-        <img src="https://source.unsplash.com/800x600/?affiliate,affiliate-marketing,influencer" alt="Affiliate Marketing">
-        <div class="service-body">
-          <h4>Affiliate Marketing</h4>
-          <p>Scale sales with partner networks, influencers and performance-based channels.</p>
-        </div>
-      </article>
-    </section>
-
-    <!-- OFFERS (anchor for menu) -->
-    <section id="offers" style="padding:20px 6%; display:block;">
-      <div style="max-width:1000px;margin:0 auto;background:var(--glass);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)">
-        <h3 style="margin:0 0 8px;color:var(--accent)">Current Offers</h3>
-        <p style="margin:0;color:rgba(230,224,255,0.75)">First month free audit + 15% off on the first campaign. Contact for custom packages.</p>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO -->
-    <section id="portfolio" class="portfolio">
-      <h3 style="margin:0 0 14px">Portfolio</h3>
-      <div class="portfolio-grid">
-        <div class="port-item"><img src="https://source.unsplash.com/600x400/?marketing,campaign" alt="Portfolio 1"></div>
-        <div class="port-item"><img src="https://source.unsplash.com/600x400/?social-media,ads" alt="Portfolio 2"></div>
-        <div class="port-item"><img src="https://source.unsplash.com/600x400/?branding,design" alt="Portfolio 3"></div>
-        <div class="port-item"><img src="https://source.unsplash.com/600x400/?influencer,marketing" alt="Portfolio 4"></div>
-      </div>
-    </section>
-
-    <section id="contact" style="padding:28px 6%;">
-      <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 320px;gap:18px;">
-        <div style="background:var(--glass);padding:18px;border-radius:12px;">
-          <h4>Contact Us</h4>
-          <p style="color:rgba(230,224,255,0.8)">Tell us about your project — we will respond within one working day.</p>
-          <form onsubmit="event.preventDefault(); alert('Thanks! We will contact you.');">
-            <div style="display:grid;gap:8px;">
-              <input required placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--accent)">
-              <input required placeholder="Email or phone" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--accent)">
-              <textarea placeholder="Project details" rows="4" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--accent)"></textarea>
-              <button class="btn btn-primary" type="submit">Send message</button>
-            </div>
-          </form>
-        </div>
-
-        <div style="background:var(--card);padding:18px;border-radius:12px;">
-          <h4 style="margin-top:0">Quick details</h4>
-          <p style="color:rgba(230,224,255,0.78)">Phone: +91-XXXXXXXXXX<br>Email: hello@visionmediaagency.com</p>
-          <p style="margin-top:12px;color:rgba(230,224,255,0.65)">Office: Remote / By appointment</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-      <div>© <strong>Vision Media Agency</strong> — All rights reserved</div>
-      <div style="opacity:0.8">Made with ❤️ in Purple</div>
+    <div style="background: white; width: 300px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden;">
+      <img src="https://i.postimg.cc/GmWqXtmc/brand-promotion.jpg" alt="Brand Promotion" style="width: 100%; height: 200px; object-fit: cover;">
+      <h3 style="margin: 15px 0; color: #5b2ca0;">Brand Promotion</h3>
+      <p style="padding: 0 20px 20px;">Increase your brand visibility with our creative promotion strategies.</p>
     </div>
-  </footer>
 
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const sideMenu = document.getElementById('sideMenu');
+    <div style="background: white; width: 300px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden;">
+      <img src="https://i.postimg.cc/zvRp3Rrf/affiliate-marketing.jpg" alt="Affiliate Marketing" style="width: 100%; height: 200px; object-fit: cover;">
+      <h3 style="margin: 15px 0; color: #5b2ca0;">Affiliate Marketing</h3>
+      <p style="padding: 0 20px 20px;">Join our affiliate network to maximize your reach and profits.</p>
+    </div>
 
-    hamburger.addEventListener('click', () => {
-      sideMenu.classList.toggle('open');
-      sideMenu.setAttribute('aria-hidden', !sideMenu.classList.contains('open'));
-    });
+  </div>
+</section>
 
-    // close side menu when clicking outside on small screens
-    window.addEventListener('click', (e) => {
-      if(!sideMenu.classList.contains('open')) return;
-      const target = e.target;
-      if(!sideMenu.contains(target) && !hamburger.contains(target)){
-        sideMenu.classList.remove('open');
-        sideMenu.setAttribute('aria-hidden', 'true');
-      }
-    });
+<!-- ===== Portfolio Section ===== -->
+<section id="portfolio" style="background: #fff; padding: 60px 20px; text-align:center;">
+  <h2 style="color: #5b2ca0; font-size: 32px; margin-bottom: 40px;">Our Portfolio</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 0 20px;">
+    
+    <img src="https://i.postimg.cc/jqR1c1DY/portfolio1.jpg" style="width:100%; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);" alt="Portfolio 1">
+    <img src="https://i.postimg.cc/SKhc4C3t/portfolio2.jpg" style="width:100%; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);" alt="Portfolio 2">
+    <img src="https://i.postimg.cc/6p2BvTLK/portfolio3.jpg" style="width:100%; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);" alt="Portfolio 3">
+    <img src="https://i.postimg.cc/Z5rWzD9y/portfolio4.jpg" style="width:100%; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);" alt="Portfolio 4">
+    <img src="https://i.postimg.cc/Mp6TFzCs/portfolio5.jpg" style="width:100%; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);" alt="Portfolio 5">
+    <img src="https://i.postimg.cc/K8HLJH3V/portfolio6.jpg" style="width:100%; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);" alt="Portfolio 6">
+  
+  </div>
+</section>
 
-    function scrollToSec(id){
-      document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
-      sideMenu.classList.remove('open');
-    }
-  </script>
-</body>
-</html>
+<!-- ===== Offer Section ===== -->
+<section id="offers" style="background: linear-gradient(135deg, #5b2ca0, #8b48d7); padding: 70px 20px; text-align: center; color: #fff;">
+  <h2 style="font-size: 34px; margin-bottom: 20px;">🎁 Exclusive Offer for You!</h2>
+  <p style="font-size: 18px; margin-bottom: 30px;">Join our Telegram channel to grab the latest deals, updates, and earning opportunities.</p>
+  <a href="https://t.me/OnlineMoneyearingbyShubham" target="_blank" 
+     style="background: #fff; color: #5b2ca0; padding: 14px 35px; border-radius: 50px; font-size: 18px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.3s;">
+     🚀 Get Offer
+  </a>
+  <p style="margin-top: 25px; font-size: 14px; opacity: 0.9;">Tap the button to open our official Telegram channel.</p>
+</section>
